@@ -11,8 +11,9 @@ Quando(/^toco no menu hamburger$/) do
   @page.menu_principal_carregou?
 end
 
-Então(/^visualizo os itens do menu ordenados por "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)"$/) do |arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8|
-  @page.validar_ordenacao_dos_itens_menu(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+Então(/^visualizo os itens do menu ordenados$/) do
+  itens= ITENS[:itens_menu]
+  @page.validar_ordenacao_dos_itens_menu itens[:itens_ordenados]
 end
 
 Dado(/^toco em "([^"]*)"$/) do |item|
@@ -35,6 +36,6 @@ Então(/^visualizo a tela de "([^"]*)" novamente$/) do |tela|
   @page.tela_desejada_carregou?(tela)
 end
 
-Então(/^visualizo as abas de "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)" e "([^"]*)"$/) do |arg1, arg2, arg3, arg4, arg5|
-  @page.validar_abas_tela_audio(arg1, arg2, arg3, arg4, arg5)
+Então(/^visualizo as abas de Artistas, Álbuns, Músicas, Gêneros e Listas de Reprodução$/) do
+  @page.validar_abas_tela_audio ITENS[:guias_tela_audio]
 end

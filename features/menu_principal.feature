@@ -5,8 +5,8 @@ Funcionalidade: Tela Inicial
 
   Cenário: Validar ordenação do menu na primeira incialização
     Dado que estou na tela inicial
-    Então visualizo os itens do menu ordenados por "Vídeo", "Áudio", "Pastas", "Rede Local", "Abrir MRL", "Histórico", "Preferências", "Sobre"
-
+    Então visualizo os itens do menu ordenados
+    #Ordenação dos itens: Vídeo, Áudio, Pastas, Rede Local, Abrir MRL, Histórico, Preferências, Sobre
 
   Esquema do Cenário: Validar se ao abrir o aplicativo está carregando a última tela visualizada
     Dado que estou na tela inicial
@@ -30,4 +30,4 @@ Funcionalidade: Tela Inicial
       Dado que estou na tela inicial
       E toco em "Áudio"
       E visualizo a tela "Áudio"
-      Então visualizo as abas de "Artistas", "Álbuns", "Músicas", "Gêneros" e "Listas de Reprodução"
+      Então visualizo as abas de Artistas, Álbuns, Músicas, Gêneros e Listas de Reprodução

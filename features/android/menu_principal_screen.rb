@@ -19,8 +19,8 @@ class HomeScreen < Calabash::ABase
     wait_for_element_exists "* id:'navigation'", timeout:10
   end
 
-  def validar_ordenacao_dos_itens_menu(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    ordenacao_correta= [arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8]
+  def validar_ordenacao_dos_itens_menu(ordenacao_correta)
+    #ordenacao_correta= [arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8]
     itens_tela= query "android.widget.CheckedTextView"
 
     indice= 0
@@ -84,8 +84,8 @@ class HomeScreen < Calabash::ABase
     start_test_server_in_background
   end
 
-  def validar_abas_tela_audio(arg1, arg2, arg3, arg4, arg5)
-    lista= [arg1, arg2, arg3, arg4, arg5]
+  def validar_abas_tela_audio(lista)
+    #lista= [arg1, arg2, arg3, arg4, arg5]
     lista.each do |item|
       fail "Não foi encontrada a aba de #{item}" if query("android.widget.TextView {text LIKE[c] '#{item}'}").empty?
       pan "android.widget.LinearLayout", :left
