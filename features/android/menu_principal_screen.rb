@@ -20,7 +20,6 @@ class HomeScreen < Calabash::ABase
   end
 
   def validar_ordenacao_dos_itens_menu(ordenacao_correta)
-    #ordenacao_correta= [arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8]
     itens_tela= query "android.widget.CheckedTextView"
 
     indice= 0
@@ -39,27 +38,7 @@ class HomeScreen < Calabash::ABase
       tocar_botao_menu
       menu_principal_carregou?
     end
-
     sleep 3
-    #elemento= query "android.support.v7.widget.LinearLayoutCompat"
-    #indice_elemento= ["Vídeo", "Áudio", "Pastas", "Rede Local", "Abrir MRL", "Histórico", "Preferências", "Sobre"]
-
-    #indice= 0
-    #contador= 0
-    #indice_elemento.each do |i|
-    #  indice= contador if i == item
-    #  contador +=1
-    #end
-
-
-    #touch elemento[indice]
-
-    #elemento= query("android.widget.CheckedTextView {text LIKE '#{item}'}").first
-    #binding.pry
-    #x= elemento['rect']['x'].to_i
-    #y= elemento['rect']['y'].to_i
-    #touch nil, :offset => {:x => x, :y => y}
-    #binding.pry
 
     begin
       tap_when_element_exists "android.widget.CheckedTextView {text LIKE '#{item}'}", timeout:5
@@ -85,7 +64,6 @@ class HomeScreen < Calabash::ABase
   end
 
   def validar_abas_tela_audio(lista)
-    #lista= [arg1, arg2, arg3, arg4, arg5]
     lista.each do |item|
       fail "Não foi encontrada a aba de #{item}" if query("android.widget.TextView {text LIKE[c] '#{item}'}").empty?
       pan "android.widget.LinearLayout", :left

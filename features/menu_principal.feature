@@ -31,3 +31,18 @@ Funcionalidade: Tela Inicial
       E toco em "Áudio"
       E visualizo a tela "Áudio"
       Então visualizo as abas de Artistas, Álbuns, Músicas, Gêneros e Listas de Reprodução
+
+    Esquema do Cenário: Alterar tipo de ordenação dos vídeos
+      Dado que estou na tela inicial
+      E toco em "Vídeo"
+      E visualizo a tela "Vídeo"
+      Quando toco no botão de opções
+      E toco em ordenar por
+      E toco na opção "<Ordenar por>"
+      Então visualizo os itens na ordenação desejada
+
+      Exemplos:
+        |   Ordenar por   |
+        |   Nome (desc)   |
+        |   Tamanho       |
+        |   Data          |

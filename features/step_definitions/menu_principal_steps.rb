@@ -39,3 +39,19 @@ end
 Então(/^visualizo as abas de Artistas, Álbuns, Músicas, Gêneros e Listas de Reprodução$/) do
   @page.validar_abas_tela_audio ITENS[:guias_tela_audio]
 end
+
+Quando(/^toco no botão de opções$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando(/^toco em ordenar por$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando(/^toco na opção "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Então(/^visualizo os itens na ordenação desejada$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
