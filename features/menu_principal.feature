@@ -24,3 +24,10 @@ Funcionalidade: Tela Inicial
       | Rede Local   | Rede Local           |
       | Abrir MRL    | Abrir fluxo de rede  |
       | Histórico    | Histórico            |
+
+
+    Cenário: Validar se todas as abas da tela de áudio estão aparecendo
+      Dado que estou na tela inicial
+      E toco em "Áudio"
+      E visualizo a tela "Áudio"
+      Então visualizo as abas de "Artistas", "Álbuns", "Músicas", "Gêneros" e "Listas de Reprodução"

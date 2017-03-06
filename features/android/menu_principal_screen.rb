@@ -83,4 +83,12 @@ class HomeScreen < Calabash::ABase
   def abrir_aplicativo
     start_test_server_in_background
   end
+
+  def validar_abas_tela_audio(arg1, arg2, arg3, arg4, arg5)
+    lista= [arg1, arg2, arg3, arg4, arg5]
+    lista.each do |item|
+      fail "Não foi encontrada a aba de #{item}" if query("android.widget.TextView {text LIKE[c] '#{item}'}").empty?
+      pan "android.widget.LinearLayout", :left
+    end
+  end
 end

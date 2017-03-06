@@ -34,3 +34,7 @@ end
 Então(/^visualizo a tela de "([^"]*)" novamente$/) do |tela|
   @page.tela_desejada_carregou?(tela)
 end
+
+Então(/^visualizo as abas de "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)" e "([^"]*)"$/) do |arg1, arg2, arg3, arg4, arg5|
+  @page.validar_abas_tela_audio(arg1, arg2, arg3, arg4, arg5)
+end
