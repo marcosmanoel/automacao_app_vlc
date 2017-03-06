@@ -28,7 +28,6 @@ class HomeScreen < Calabash::ABase
       fail "A Ordenação dos itens do menu está incorreta" unless itens_tela[indice]['text'].include?(item)
       indice +=1
     end
-
     sleep 3
   end
 
@@ -41,6 +40,7 @@ class HomeScreen < Calabash::ABase
       menu_principal_carregou?
     end
 
+    sleep 3
     #elemento= query "android.support.v7.widget.LinearLayoutCompat"
     #indice_elemento= ["Vídeo", "Áudio", "Pastas", "Rede Local", "Abrir MRL", "Histórico", "Preferências", "Sobre"]
 
