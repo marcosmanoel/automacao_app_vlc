@@ -1,5 +1,3 @@
-#require 'calabash-android/calabash_steps'
-#require_relative '../android/home_screen'
 
 Dado(/^que estou na tela inicial$/) do
   @page= page(HomeScreen).await(timeout:5)
@@ -41,17 +39,17 @@ Então(/^visualizo as abas de Artistas, Álbuns, Músicas, Gêneros e Listas de 
 end
 
 Quando(/^toco no botão de opções$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @page.tocar_botao_mais_opcoes
 end
 
 Quando(/^toco em ordenar por$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @page.tocar_em_ordenar_por
 end
 
 Quando(/^toco na opção "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  @page.tocar_opcao_ordenacao
 end
 
 Então(/^visualizo os itens na ordenação desejada$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @page.tela_inicial_carregou?
 end

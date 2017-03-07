@@ -69,4 +69,16 @@ class HomeScreen < Calabash::ABase
       pan "android.widget.LinearLayout", :left
     end
   end
+
+  def tocar_botao_mais_opcoes
+    tap_when_element_exists "android.widget.ImageView {contentDescription LIKE[c] 'Mais opções'}", timeout:15
+  end
+
+  def tocar_em_ordenar_por
+    tap_when_element_exists "* id:'title' {text CONTAINS[c] 'ordenar'}", timeout:10
+  end
+
+  def tocar_opcao_ordenacao(tipo_ordenacao)
+    tap_when_element_exists "* id:'title' {text LIKE[c] '#{tipo_ordenacao}'}", timeout:10
+  end
 end
