@@ -1,0 +1,9 @@
+# config/cucumber.yml
+##YAML Template
+---
+#android: PLATFORM=android -r features/support -r features/android -r features/step_definitions -r features/android/pages
+
+#ios: PLATFORM=ios APP_BUNDLE_PATH=prebuilt/WordPress-cal.app  -r features/support -r features/ios/support -r features/ios/helpers -r features/step_definitions -r features/ios/pages
+
+#default: --format json -o reports\Report_<%= ENV['ADB_DEVICE_ARG']%>_<%= ENV['DEVICE_INFO']%>_<%= ENV['TEST_PROCESS_NUMBER']%>.json --format html -o reports\Report_<%= ENV['ADB_DEVICE_ARG']%>_<%= ENV['DEVICE_INFO']%>_<%= ENV['TEST_PROCESS_NUMBER']%>.html --format pretty 
+default: --format json -o reports\<%=ENV['DEVICE_INFO']%>_<%= ENV['TEST_PROCESS_NUMBER']%>.json --format html -o reports\Report_<%= ENV['ADB_DEVICE_ARG']%>_<%= ENV['DEVICE_INFO']%>_<%= ENV['TEST_PROCESS_NUMBER']%>.html --format pretty 
